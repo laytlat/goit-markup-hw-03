@@ -10,10 +10,28 @@
   --ninth-color: #188ce8;
 }
 
+/** {
+  outline: 1px solid red;
+}
+
 /* Global  */
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .list {
   list-style-type: none;
+  padding: 0;
 }
 
 .link {
@@ -33,7 +51,25 @@ body {
   font-family: inherit;
 }
 
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+}
+
+.container:not(:first-child) {
+  margin-top: 95px;
+}
+
 /*  Header + Footer  */
+
+.header {
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  align-items: center;
+  min-height: 80px;
+}
 
 .logo {
   color: var(--fifth-color);
@@ -41,9 +77,26 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  margin-right: 95px;
 }
 .logo-web {
   color: var(--third-color);
+}
+
+.header .list {
+  display: flex;
+}
+
+.nav-list .item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.contact-list .item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.contact-list {
+  margin-left: auto;
 }
 
 .nav-link {
@@ -77,12 +130,31 @@ body {
 }
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1600px;
   background-color: var(--seventh-color);
+}
+
+.footer .logo {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.footer .contact {
+  padding-top: 10px;
+}
+
+.footer .list {
+  padding-top: 20px;
 }
 
 .adress {
   color: var(--sixth-color);
   font-style: normal;
+  padding-left: 0;
 }
 
 .footer .contact,
@@ -90,6 +162,10 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.footer .container {
+  margin: 0 auto;
 }
 
 .logo-studio {
@@ -104,18 +180,26 @@ body {
 
 .hero {
   background-color: var(--seventh-color);
+  padding-top: 200px;
+  padding-bottom: 210px;
+  width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .service-button {
+  display: flex;
   color: var(--fourth-color);
   background-color: var(--third-color);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
   border: none;
   border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-button:focus,
@@ -131,9 +215,20 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  width: 695px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Advantages  */
+
+.advantages {
+  display: flex;
+}
+
+.advantages .item.item:not(:first-child) {
+  margin-left: 30px;
+}
 
 .section-title {
   color: var(--secondary-color);
@@ -154,9 +249,22 @@ body {
   line-height: 1.71;
 }
 
+/*   Service Images   */
+.service-images {
+  display: flex;
+  padding-top: 50px;
+}
+
+.service-images .item.item:not(:first-child) {
+  margin-left: 30px;
+}
+
 /* Team  */
 
 .team-section {
+  padding-top: 95px;
+  padding-bottom: 95px;
+  width: 1600px;
   background-color: var(--eighth-color);
 }
 
@@ -169,6 +277,19 @@ body {
 
 .team-member {
   background-color: var(--sixth-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-member:not(:first-child) {
+  margin-left: 30px;
+}
+
+.team-list {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
 }
 
 .member-role {
@@ -182,6 +303,13 @@ body {
 
 /* Filter buttons*/
 
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  margin-top: 95px;
+}
+
 .filter-button {
   color: var(--secondary-color);
   font-weight: 500;
@@ -192,6 +320,10 @@ body {
   border-radius: 4px;
 }
 
+.filter-button:not(first-child) {
+  margin-left: 10px;
+}
+
 .filter-button:hover,
 .filter-button:focus {
   color: var(--sixth-color);
@@ -200,16 +332,44 @@ body {
 
 /* Project list */
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 95px;
+}
+
+.projects .item:nth-child(4),
+.projects .item:nth-child(5),
+.projects .item:nth-child(6) {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .project-title {
   color: var(--secondary-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  padding-top: 20px;
 }
 
 .project-type {
   font-size: 16px;
   line-height: 1.88;
+  padding-bottom: 20px;
+}
+
+.project {
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.project-title,
+.project-type {
+  padding-left: 25px;
 }
 
 /*__________________________________________________________*/
